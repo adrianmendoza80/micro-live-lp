@@ -1,0 +1,36 @@
+/* 1. Reseteo global para que el mapa ocupe toda la pantalla */
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* EFECTO UBER: Suaviza el movimiento del marcador del micro */
+img[src*="cdn-icons-png"] {
+  transition: all 3s linear !important; 
+}
+
+/* 3. Estilos para la interfaz de texto (opcional) */
+.App {
+  text-align: center;
+}
+
+/* 4. Animación original de React (por si decides usar el logo en otra pantalla) */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 5. Ajuste para que los botones y tarjetas no se vean afectados por el text-align */
+button, .tarjeta-info {
+  text-align: left;
+}
